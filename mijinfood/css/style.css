@@ -5,10 +5,85 @@
   font-style: normal;
 }
 
+:root {
+  --swiper-theme-color: #fff !important;
+}
+
 * {
   font-family: 'Pretendard-Regular';
 }
 
 .con {
-  width:1200px;
+  width:1240px;
+  padding:0 20px;
+}
+
+.main-slider .swiper {
+  min-width:1240px;
+  height: 623px;
+}
+
+.main-slider .swiper .swiper-slide {
+  background-image:url("../img/main-slide__01.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+.text-main-color {
+  color:#BD3333;
+}
+
+.bg-main-color {
+  background-color: #BD3333;
+}
+
+.prod-list-box ul > li {
+  width:264px;
+}
+
+.banner {
+  height:480px;
+  background-image:url("../img/banner.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+.prod-list-box-2 > ul > li > div:first-child {
+  height:264px;
+}
+
+.promotion-box__item {
+  background-color:#F6EAEA;
+}
+
+.promotion-box__item:nth-child(2) {
+  background-color:#E8E8E8;
+}
+
+.promotion-box__item > div:first-child {
+  width:600px;
+}
+
+.promotion-ico {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.promotion-box__item:nth-child(2) .promotion-ico {
+  right:-49px;
+}
+
+.promotion-box {
+  min-width:1240px;
+}
+
+.new-prod-slider .swiper-slide > div:first-child {
+  aspect-ratio: 1/1;
+}
+
+footer {
+  background-color:#F3F3F3;
 }

@@ -15,50 +15,693 @@
 
 <body>
   <header>
-    <div class="flex flex-col gap-2 mx-auto con">
-      <div class="mt-2 text-sm text-right text-gray-400">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
-      </div>
-      <div class="flex">
-        <div class="flex-1"></div>
-        <h1 class="logo">
-          <img src="./img/logo.png" alt="logo">
-        </h1>
-        <div class="flex items-center justify-end flex-1 gap-5">
-          <a href="#" class="flex flex-col items-center">
-            <img src="./img/iconoir_user.svg" alt="user">
-            <div>마이페이지</div>
-          </a>
-          <a href="#" class="flex flex-col items-center">
-            <img src="./img/iconoir_cart.svg" alt="cart">
-            <div>장바구니</div>
-          </a>
+    <div class="mx-auto con">
+      <div class="flex flex-col gap-2">
+        <div class="mt-2 text-sm text-right text-gray-400">
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
         </div>
-      </div>
-      <div>
-        <div class="flex items-center justify-between py-4 mx-auto con">
-          <div class="flex gap-1 cursor-pointer">
-            <img src="./img/iconoir_menu.svg" alt="menu">
-            <div class="whitespace-nowrap">카테고리</div>
+        <div class="flex">
+          <div class="flex-1"></div>
+          <h1 class="logo">
+            <img src="./img/logo.png" alt="logo">
+          </h1>
+          <div class="flex items-center justify-end flex-1 gap-5 text-sm">
+            <a href="#" class="flex flex-col items-center">
+              <img src="./img/iconoir_user.svg" alt="user">
+              <div>마이페이지</div>
+            </a>
+            <a href="#" class="flex flex-col items-center">
+              <img src="./img/iconoir_cart.svg" alt="cart">
+              <div>장바구니</div>
+            </a>
           </div>
-          <nav>
-            <ul class="flex gap-12">
-              <li><a href="#">신상품</a></li>
-              <li><a href="#">베스트</a></li>
-              <li><a href="#">특가상품</a></li>
-              <li><a href="#">정기배송</a></li>
-              <li><a href="#">이벤트</a></li>
-              <li><a href="#">고객센터</a></li>
-            </ul>
-          </nav>
-          <div>
-            <input type="text" class="border-2 border-red rounded-2xl">
+        </div>
+        <div>
+          <div class="flex items-center justify-between py-4">
+            <div class="flex gap-1 cursor-pointer">
+              <img src="./img/iconoir_menu.svg" alt="menu">
+              <div class="whitespace-nowrap">카테고리</div>
+            </div>
+            <nav>
+              <ul class="flex gap-12">
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">특가상품</a></li>
+                <li><a href="#">정기배송</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+              </ul>
+            </nav>
+            <div>
+              <input type="text" class="border-2 border-red rounded-2xl">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <div class="main-slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slide-1">
+          <div class="mx-auto mt-40 slide-txt con">
+            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          </div>
+        </div>
+        <div class="swiper-slide slide-2">
+          <div class="mx-auto mt-40 slide-txt con">
+            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          </div>
+        </div>
+        <div class="swiper-slide slide-3">
+          <div class="mx-auto mt-40 slide-txt con">
+            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <section class="mt-32">
+    <div class="mx-auto con">
+      <div class="section-title">
+        <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
+        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+      </div>
+      <div class="mt-12 prod-list-box">
+        <ul class="flex gap-12">
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="mt-32">
+    <div class="mx-auto con">
+      <div class="section-title">
+        <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
+        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+      </div>
+      <div class="mt-12 prod-list-box">
+        <ul class="flex gap-12">
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+                <div class="text-sm text-gray-400">
+                  그램수
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-sm font-bold">
+                <div class="px-2 bg-blue-400">COUPON</div>
+                <div class="px-2 bg-gray-200">일시품절</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="mt-32 banner">
+    <div class="mx-auto text-right con">
+      <div class="inline-block mt-40 mr-20 text-center border">
+        <h2 class="text-4xl font-bold">나를 위한 오늘의 선택, 미진 통닭</h2>
+        <div class="mt-2 text-gray-400">바쁜하루, 시간도 없고 이것저것 챙겨먹기도 어렵다면 미진을 만나보세요.<br>현대인의 건강하면서 간편한 식사, 미진이 연구합니다.</div>
+      </div>
+    </div>
+  </section>
+  <section class="mt-32">
+    <div class="mx-auto con">
+      <div class="section-title">
+        <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
+        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+      </div>
+      <div class="mt-12 prod-list-box prod-list-box-2">
+        <ul class="flex flex-wrap gap-12">
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="overflow-hidden rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold">
+                  상품제목
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  70%
+                </div>
+                <div class="font-bold">
+                  20,000원
+                </div>
+                <div class="text-gray-400 line-through">
+                  40,000원
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="flex mt-32 overflow-hidden promotion-box h-52">
+    <div class="w-1/2 h-full promotion-box__item">
+      <div class="relative flex flex-col items-start justify-center h-full pl-10 ml-auto">
+        <div class="text-2xl font-bold">회원가입 하고 할인쿠폰 받아가세요!</div>
+        <a class="mt-4 text-gray-400" href="#">가입하기</a>
+        <div class="promotion-ico">
+          <img src="./img/promo-ico__01.png" alt="promo-ico__01">
+        </div>
+      </div>
+    </div>
+    <div class="w-1/2 h-full promotion-box__item">
+      <div class="relative flex flex-col items-start justify-center h-full pl-10">
+        <div class="text-2xl font-bold">상품리뷰 쓰고 적립금 받아가세요!</div>
+        <a class="mt-4 text-gray-400" href="#">리뷰쓰기</a>
+        <div class="promotion-ico">
+          <img src="./img/promo-ico__02.png" alt="promo-ico__02">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-32">
+    <div class="mx-auto con">
+      <div class="flex gap-8">
+        <div class="section-title">
+          <h2 class="text-2xl">따끈따끈한<br><span class="font-bold text-main-color">신제품</span></h2>
+          <div>신제품 특가 놓치지 말고 꼭 확인하세요!</div>
+          <div class="slider-arrow">
+            <div class="flex justify-end mt-10">
+              <div class="slider-button-prev">
+                <img src="./img/slider-arrow-prev.svg" alt="slider-arrow-prev">
+              </div>
+              <div class="slider-button-next">
+                <img src="./img/slider-arrow-next.svg" alt="slider-arrow-next">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-grow w-0 new-prod-slider h-96">
+          <div class="h-full swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1">
+                <div class="overflow-hidden rounded-xl">
+                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
+                    alt="food-list__01">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold">
+                      상품제목
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold text-main-color">
+                      70%
+                    </div>
+                    <div class="font-bold">
+                      20,000원
+                    </div>
+                    <div class="text-gray-400 line-through">
+                      40,000원
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-slide slide-2">
+                <div class="overflow-hidden rounded-xl">
+                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
+                    alt="food-list__01">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold">
+                      상품제목
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold text-main-color">
+                      70%
+                    </div>
+                    <div class="font-bold">
+                      20,000원
+                    </div>
+                    <div class="text-gray-400 line-through">
+                      40,000원
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-3">
+                <div class="overflow-hidden rounded-xl">
+                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
+                    alt="food-list__01">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold">
+                      상품제목
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold text-main-color">
+                      70%
+                    </div>
+                    <div class="font-bold">
+                      20,000원
+                    </div>
+                    <div class="text-gray-400 line-through">
+                      40,000원
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="mt-32">
+    <div class="py-10 mx-auto con">
+      <div class="footer-menu">
+        <ul class="flex gap-4">
+          <li><a href="#">메뉴1</a></li>
+          <li><a href="#">메뉴2</a></li>
+          <li><a href="#">메뉴3</a></li>
+          <li><a href="#">메뉴4</a></li>
+          <li><a href="#">메뉴5</a></li>
+        </ul>
+      </div>
+      <div class="flex justify-between">
+        <div>
+          <div class="footer-logo">
+            <img src="./img/footer-logo.png" alt="footer-logo">
+          </div>
+          
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
