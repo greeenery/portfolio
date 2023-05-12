@@ -11,20 +11,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.0/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.0/swiper-bundle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png">
 </head>
 
 <body>
-  <header>
+  <header class="relative">
     <div class="mx-auto con">
       <div class="flex flex-col gap-2">
-        <div class="mt-2 text-sm text-right text-gray-400">
+        <div class="mt-2 text-xs text-right text-gray-400">
           <a href="#">로그인</a>
           <a href="#">회원가입</a>
         </div>
         <div class="flex">
           <div class="flex-1"></div>
           <h1 class="logo">
-            <img src="./img/logo.png" alt="logo">
+            <a href="#">
+              <img src="./img/logo.png" alt="logo">
+            </a>
           </h1>
           <div class="flex items-center justify-end flex-1 gap-5 text-sm">
             <a href="#" class="flex flex-col items-center">
@@ -39,8 +43,12 @@
         </div>
         <div>
           <div class="flex items-center justify-between py-4">
-            <div class="flex gap-1 cursor-pointer">
-              <img src="./img/iconoir_menu.svg" alt="menu">
+            <div class="flex items-center gap-2 cursor-pointer btn-category">
+              <div class="hamburger">
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+              </div>
               <div class="whitespace-nowrap">카테고리</div>
             </div>
             <nav>
@@ -53,11 +61,67 @@
                 <li><a href="#">고객센터</a></li>
               </ul>
             </nav>
-            <div>
-              <input type="text" class="border-2 border-red rounded-2xl">
+            <div class="input-box">
+              <input type="text">
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="absolute z-10 w-full bg-white category-box bg-opacity-90">
+      <div class="mx-auto con">
+        <ul class="flex gap-12 my-10 text-center">
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">베스트</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">특가상품</a></li>
+              <li><a href="#">선물세트</a></li>
+            </ul>
+          </li>
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">정육</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">국내산소고기</a></li>
+              <li><a href="#">수입산소고기</a></li>
+              <li><a href="#">돼지고기</a></li>
+            </ul>
+          </li>
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">닭고기</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">백숙용닭</a></li>
+              <li><a href="#">절단닭/볶음탕용닭</a></li>
+              <li><a href="#">닭가슴살/안심</a></li>
+              <li><a href="#">닭다리</a></li>
+              <li><a href="#">닭날개/윙/봉</a></li>
+              <li><a href="#">닭발/근위/기타부위</a></li>
+            </ul>
+          </li>
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">수산</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">생선</a></li>
+              <li><a href="#">패류</a></li>
+              <li><a href="#">건어물</a></li>
+              <li><a href="#">젓갈</a></li>
+            </ul>
+          </li>
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">정기배송</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">정기배송신청</a></li>
+              <li><a href="#">정기배송해지</a></li>
+            </ul>
+          </li>
+          <li class="flex flex-col w-40 gap-4">
+            <a href="#" class="text-main-color">고객센터</a>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자주묻는질문</a></li>
+              <li><a href="#">문의하기</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -66,113 +130,153 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide slide-1">
-          <div class="mx-auto mt-40 slide-txt con">
-            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          <div class="mx-auto slide-txt con">
+            <div class="inline-block text-center">
+              <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+              <div class="inline-block px-10 py-3 mt-10 text-white duration-300 border shadow cursor-pointer hover:bg-white hover:bg-opacity-80 hover:text-red-700">구매하기</div>
+            </div>
           </div>
         </div>
         <div class="swiper-slide slide-2">
-          <div class="mx-auto mt-40 slide-txt con">
-            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          <div class="mx-auto text-right slide-txt con">
+            <div class="inline-block text-center">
+              <img src="./img/main-slide-txt__02.png" alt="main-slide-txt__02">
+              <div class="inline-block px-10 py-3 mt-10 text-white duration-300 border shadow cursor-pointer hover:bg-white hover:bg-opacity-80 hover:text-red-700">구매하기</div>
+            </div>
           </div>
         </div>
         <div class="swiper-slide slide-3">
-          <div class="mx-auto mt-40 slide-txt con">
-            <img src="./img/main-slide-txt__01.png" alt="main-slide-txt__01">
+          <div class="mx-auto slide-txt con">
+            <div class="inline-block text-center">
+              <img src="./img/main-slide-txt__03.png" alt="main-slide-txt__03">
+              <div class="inline-block px-10 py-3 mt-10 text-white duration-300 border shadow cursor-pointer hover:bg-white hover:bg-opacity-80 hover:text-red-700">구매하기</div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev">
+        <img src="./img/main-slider-arrow-prev.svg" alt="main-slider-arrow-prev">
+      </div>
+      <div class="swiper-button-next">
+        <img src="./img/main-slider-arrow-next.svg" alt="main-slider-arrow-next">
+      </div>
     </div>
   </div>
+  <div>
   <section class="mt-32">
     <div class="mx-auto con">
       <div class="section-title">
         <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
-        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+        <div class="text-gray-400">가장 인기있는 상품 보고가세요!</div>
       </div>
       <div class="mt-12 prod-list-box">
         <ul class="flex gap-12">
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__01.png" alt="food-list__01">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  무항생제 토종닭 (백숙용)
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  1,050g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
                 <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
+                  14,980원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
-                <div class="px-2 bg-blue-400">COUPON</div>
+              <div class="flex gap-1 mt-3 text-xs font-bold">
+                <div class="px-2 text-white bg-red-500">HOT</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__02.png" alt="food-list__02">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold cursor-pointer hover:underline">
+                  [냉장][노르웨이] 자반 고등어 (특, 1손)
+                </div>
+                <div class="text-sm text-gray-400">
+                  750g
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold">
+                  5,980원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-xs font-bold">
+                <div class="px-2 text-white bg-red-500">HOT</div>
                 <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__03.png" alt="food-list__03">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  얇고 담백한 미진 베이컨
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  300g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  30%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  4,980원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  6,474원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
+              <div class="flex gap-1 mt-3 text-xs font-bold">
+                <div class="px-2 text-white bg-red-500">HOT</div>
                 <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__04.png" alt="food-list__04">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  구이용 베이컨
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  800g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  50%
                 </div>
                 <div class="font-bold">
                   20,000원
@@ -181,39 +285,9 @@
                   40,000원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
+              <div class="flex gap-1 mt-3 text-xs font-bold">
+                <div class="px-2 text-white bg-red-500">HOT</div>
                 <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
-            </div>
-            <div class="py-5">
-              <div>
-                <div class="font-bold">
-                  상품제목
-                </div>
-                <div class="text-sm text-gray-400">
-                  그램수
-                </div>
-              </div>
-              <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
-                <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
-                </div>
-              </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
-                <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
@@ -224,128 +298,137 @@
   <section class="mt-32">
     <div class="mx-auto con">
       <div class="section-title">
-        <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
-        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+        <h2 class="text-2xl">지금이 최저가! <span class="font-bold text-main-color">할인 상품</span></h2>
+        <div class="text-gray-400">오직 지금 뿐인 할인 상품을 놓치지 마세요!</div>
       </div>
       <div class="mt-12 prod-list-box">
         <ul class="flex gap-12">
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__05.png" alt="food-list__05">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  와규 윗등심살
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  6,680원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  8,840원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
+              <div class="flex gap-1 mt-3 text-xs font-bold">
                 <div class="px-2 bg-blue-400">COUPON</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__06.png" alt="food-list__06">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
+            </div>
+            <div class="py-5">
+              <div>
+                <div class="font-bold cursor-pointer hover:underline">
+                  [냉동] 무항생제 닭가슴살
+                </div>
+                <div class="text-sm text-gray-400">
+                  1,000g
+                </div>
+              </div>
+              <div class="flex gap-1 mt-4">
+                <div class="font-bold text-main-color">
+                  20%
+                </div>
+                <div class="font-bold">
+                  7,504원
+                </div>
+                <div class="text-gray-400 line-through">
+                  9,380원
+                </div>
+              </div>
+              <div class="flex gap-1 mt-3 text-xs font-bold">
                 <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__07.png" alt="food-list__07">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  [냉동] 무항생제 닭봉
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  800g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  9,184원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  11,480원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
+              <div class="flex gap-1 mt-3 text-xs font-bold">
+                <div class="px-2 text-white bg-red-500">HOT</div>
                 <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer h-96 rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__08.png" alt="food-list__08">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  안주용 미진 베이컨
                 </div>
                 <div class="text-sm text-gray-400">
-                  그램수
+                  500g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  30%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  6,240원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  9,820원
                 </div>
               </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
+              <div class="flex gap-1 mt-3 text-xs font-bold">
                 <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="overflow-hidden h-96 rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
-            </div>
-            <div class="py-5">
-              <div>
-                <div class="font-bold">
-                  상품제목
-                </div>
-                <div class="text-sm text-gray-400">
-                  그램수
-                </div>
-              </div>
-              <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
-                <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
-                </div>
-              </div>
-              <div class="flex gap-1 mt-3 text-sm font-bold">
-                <div class="px-2 bg-blue-400">COUPON</div>
-                <div class="px-2 bg-gray-200">일시품절</div>
               </div>
             </div>
           </li>
@@ -354,201 +437,234 @@
     </div>
   </section>
   <section class="mt-32 banner">
-    <div class="mx-auto text-right con">
-      <div class="inline-block mt-40 mr-20 text-center border">
+    <div class="h-full mx-auto con">
+      <div class="flex items-center justify-end h-full">
+      <div class="inline-block mr-20 text-center">
         <h2 class="text-4xl font-bold">나를 위한 오늘의 선택, 미진 통닭</h2>
         <div class="mt-2 text-gray-400">바쁜하루, 시간도 없고 이것저것 챙겨먹기도 어렵다면 미진을 만나보세요.<br>현대인의 건강하면서 간편한 식사, 미진이 연구합니다.</div>
+        <div class="inline-block px-10 py-3 mt-10 duration-300 border border-black cursor-pointer hover:bg-black hover:bg-opacity-80 hover:text-white">구매하기</div>
       </div>
+    </div>
     </div>
   </section>
   <section class="mt-32">
     <div class="mx-auto con">
       <div class="section-title">
-        <h2 class="text-2xl">오늘의 <span class="font-bold text-main-color">베스트 상품</span></h2>
-        <div>가장 인기있는 미진만의 상품 보고가세요!</div>
+        <h2 class="text-2xl">오직 미진에서만! <span class="font-bold text-main-color">미진 제품</span></h2>
+        <div class="text-gray-400">미진에서만 볼 수 있는 특별한 제품!</div>
       </div>
       <div class="mt-12 prod-list-box prod-list-box-2">
         <ul class="flex flex-wrap gap-12">
           <li>
-            <div class="overflow-hidden rounded-xl">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
               <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  블랙앵거스 토마호크 스테이크
+                </div>
+                <div class="text-sm text-gray-400">
+                  400g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
                 <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
+                  36,800원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__09.png" alt="food-list__09">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  닭가슴살 직화 통살구이
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  3,980원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  5,260원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__10.png" alt="food-list__10">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  닭가슴살 직화 스테이크 
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  3,980원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  5,240원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__11.png" alt="food-list__11">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  한우 앞다리 시즈닝 스테이크
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  5,264원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  6,580원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__12.png" alt="food-list__12">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  한우 설도 시즈닝 스테이크
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  20%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  5,264원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  6,580원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__13.png" alt="food-list__13">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  횡성축협한우 등심 구이용 1등급 (팩)
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
                 <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
+                  11,980원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__14.png" alt="food-list__14">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  횡성축협한우 사태 찜용 (팩)
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
-                <div class="font-bold text-main-color">
-                  70%
-                </div>
                 <div class="font-bold">
-                  20,000원
-                </div>
-                <div class="text-gray-400 line-through">
-                  40,000원
+                  6,380원
                 </div>
               </div>
             </div>
           </li>
           <li>
-            <div class="overflow-hidden rounded-xl">
-              <img class="block object-cover object-center h-full" src="./img/main-slide__01.png" alt="food-list__01">
+            <div class="relative overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__15.png" alt="food-list__15">
+              <div class="absolute cursor-pointer cart-ico bottom-1 right-1">
+                <img src="./img/cart.png" alt="cart">
+              </div>
             </div>
             <div class="py-5">
               <div>
-                <div class="font-bold">
-                  상품제목
+                <div class="font-bold cursor-pointer hover:underline">
+                  미국산 프라임 윗등심살 ST
+                </div>
+                <div class="text-sm text-gray-400">
+                  100g
                 </div>
               </div>
               <div class="flex gap-1 mt-4">
                 <div class="font-bold text-main-color">
-                  70%
+                  30%
                 </div>
                 <div class="font-bold">
-                  20,000원
+                  2,296원
                 </div>
                 <div class="text-gray-400 line-through">
-                  40,000원
+                  3,280원
                 </div>
               </div>
             </div>
@@ -560,8 +676,8 @@
   <section class="flex mt-32 overflow-hidden promotion-box h-52">
     <div class="w-1/2 h-full promotion-box__item">
       <div class="relative flex flex-col items-start justify-center h-full pl-10 ml-auto">
-        <div class="text-2xl font-bold">회원가입 하고 할인쿠폰 받아가세요!</div>
-        <a class="mt-4 text-gray-400" href="#">가입하기</a>
+        <h2 class="text-2xl font-bold">회원가입 하고 할인쿠폰 받아가세요!</h2>
+        <a class="mt-4 text-gray-400 border-b border-gray-400" href="#">가입하기</a>
         <div class="promotion-ico">
           <img src="./img/promo-ico__01.png" alt="promo-ico__01">
         </div>
@@ -569,21 +685,20 @@
     </div>
     <div class="w-1/2 h-full promotion-box__item">
       <div class="relative flex flex-col items-start justify-center h-full pl-10">
-        <div class="text-2xl font-bold">상품리뷰 쓰고 적립금 받아가세요!</div>
-        <a class="mt-4 text-gray-400" href="#">리뷰쓰기</a>
+        <h2 class="text-2xl font-bold">상품리뷰 쓰고 적립금 받아가세요!</h2>
+        <a class="mt-4 text-gray-400 border-b border-gray-400" href="#">리뷰쓰기</a>
         <div class="promotion-ico">
           <img src="./img/promo-ico__02.png" alt="promo-ico__02">
         </div>
       </div>
     </div>
   </section>
-
   <section class="mt-32">
     <div class="mx-auto con">
       <div class="flex gap-8">
         <div class="section-title">
           <h2 class="text-2xl">따끈따끈한<br><span class="font-bold text-main-color">신제품</span></h2>
-          <div>신제품 특가 놓치지 말고 꼭 확인하세요!</div>
+          <div class="text-gray-400">신제품 특가 놓치지 말고 꼭 확인하세요!</div>
           <div class="slider-arrow">
             <div class="flex justify-end mt-10">
               <div class="slider-button-prev">
@@ -599,74 +714,128 @@
           <div class="h-full swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide slide-1">
-                <div class="overflow-hidden rounded-xl">
-                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
-                    alt="food-list__01">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+                  <img class="block object-cover object-center h-full" src="./img/food-list__16.png" alt="food-list__16">
                 </div>
                 <div class="py-5">
                   <div>
-                    <div class="font-bold">
-                      상품제목
+                    <div class="font-bold cursor-pointer hover:underline">
+                      호주산 레스토랑 안심 ST (100g) (팩)
                     </div>
                   </div>
                   <div class="flex gap-1 mt-4">
                     <div class="font-bold text-main-color">
-                      70%
+                      20%
                     </div>
                     <div class="font-bold">
-                      20,000원
+                      6,944원
                     </div>
                     <div class="text-gray-400 line-through">
-                      40,000원
+                      8,680원
                     </div>
                   </div>
                 </div>
 
               </div>
               <div class="swiper-slide slide-2">
-                <div class="overflow-hidden rounded-xl">
-                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
-                    alt="food-list__01">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+              <img class="block object-cover object-center h-full" src="./img/food-list__17.png" alt="food-list__17">
                 </div>
                 <div class="py-5">
                   <div>
-                    <div class="font-bold">
-                      상품제목
+                    <div class="font-bold cursor-pointer hover:underline">
+                      토마호크 티본 스테이크
                     </div>
                   </div>
                   <div class="flex gap-1 mt-4">
                     <div class="font-bold text-main-color">
-                      70%
+                      5%
                     </div>
                     <div class="font-bold">
-                      20,000원
+                      130.970원
                     </div>
                     <div class="text-gray-400 line-through">
-                      40,000원
+                      139,000원
                     </div>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide slide-3">
-                <div class="overflow-hidden rounded-xl">
-                  <img class="block object-cover object-center h-full" src="./img/main-slide__01.png"
-                    alt="food-list__01">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+                  <img class="block object-cover object-center h-full" src="./img/food-list__18.png" alt="food-list__18">
                 </div>
                 <div class="py-5">
                   <div>
-                    <div class="font-bold">
-                      상품제목
+                    <div class="font-bold cursor-pointer hover:underline">
+                      블랙앵거스 토마호크 스테이크 선물세트
                     </div>
                   </div>
                   <div class="flex gap-1 mt-4">
                     <div class="font-bold text-main-color">
-                      70%
+                      11%
                     </div>
                     <div class="font-bold">
-                      20,000원
+                      137,400원
                     </div>
                     <div class="text-gray-400 line-through">
-                      40,000원
+                      155,000원
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-4">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+                  <img class="block object-cover object-center w-full h-full" src="./img/food-list__01.png" alt="food-list__01">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold cursor-pointer hover:underline">
+                      무항생제 토종닭 (백숙용)
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold">
+                      14,980원
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-5">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+                  <img class="block object-cover object-center w-full h-full" src="./img/food-list__02.png" alt="food-list__02">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold cursor-pointer hover:underline">
+                  [냉장][노르웨이] 자반 고등어 (특, 1손)
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold">
+                      5,980원
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-6">
+                <div class="overflow-hidden cursor-pointer rounded-xl">
+                  <img class="block object-cover object-center w-full h-full" src="./img/food-list__03.png" alt="food-list__03">
+                </div>
+                <div class="py-5">
+                  <div>
+                    <div class="font-bold cursor-pointer hover:underline">
+                      얇고 담백한 미진 베이컨
+                    </div>
+                  </div>
+                  <div class="flex gap-1 mt-4">
+                    <div class="font-bold text-main-color">
+                      30%
+                    </div>
+                    <div class="font-bold">
+                      4,980원
+                    </div>
+                    <div class="text-gray-400 line-through">
+                      6,474원
                     </div>
                   </div>
                 </div>
@@ -677,31 +846,55 @@
       </div>
     </div>
   </section>
-
-
+</div>
   <footer class="mt-32">
     <div class="py-10 mx-auto con">
       <div class="footer-menu">
         <ul class="flex gap-4">
-          <li><a href="#">메뉴1</a></li>
-          <li><a href="#">메뉴2</a></li>
-          <li><a href="#">메뉴3</a></li>
-          <li><a href="#">메뉴4</a></li>
-          <li><a href="#">메뉴5</a></li>
+          <li><a href="#">이용안내</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li><a href="#">사업자정보확인</a></li>
         </ul>
       </div>
-      <div class="flex justify-between">
+      <div class="flex justify-between mt-5">
         <div>
           <div class="footer-logo">
             <img src="./img/footer-logo.png" alt="footer-logo">
           </div>
-          
+          <div class="mt-4 text-sm text-gray-400">
+            <div>상호명:미진식품</div>
+            <div>대표이사 : 김미진 주소 : 미진시 미진구 미진로 123 (미진동)</div>
+            <div>사업자등록번호 : 123-45-67890</div>
+            <div class="mt-4">© 2023 MijinFood All rights reserved.</div>
+          </div>
         </div>
-        <div></div>
+        <div class="flex flex-col items-end gap-1">
+          <div class="text-2xl font-bold">고객센터</div>
+          <div class="text-2xl font-bold text-main-color">070-123-4567</div>
+          <div class="text-sm text-gray-400">월~금 09:00~ 18:00</div>
+          <div class="text-sm text-gray-400">일요일 및 공휴일 휴무</div>
+          <a href="#" class="block px-8 py-2 mt-5 text-gray-400 border-2 border-gray-400">카카오톡 문의</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <div class="fixed z-50 flex flex-col gap-5 px-2 py-5 text-sm bg-white rounded floating-menu bg-opacity-90 bottom-10 right-10">
+    <a href="#" class="flex flex-col items-center">
+      <img src="./img/iconoir_cart.svg" alt="cart">
+      <div>장바구니</div>
+    </a>
+    <a href="#" class="flex flex-col items-center">
+      <img src="./img/iconoir_user.svg" alt="user">
+      <div>마이페이지</div>
+    </a>
+    <div class="flex flex-col items-center cursor-pointer btn-top">
+      <img src="./img/arrow-up.svg" alt="arrow-up">
+      <div class="font-bold">TOP</div>
+    </div>
+  </div>
 </body>
 
 </html>
